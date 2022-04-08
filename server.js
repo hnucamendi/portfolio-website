@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = mysql.createConnection({
-  host: "",
+  host: "portfolio.ctul2xxq1xtc.us-east-2.rds.amazonaws.com",
   user: "admin",
   password: SQL_PASSWORD,
   database: "portfolio_content",
