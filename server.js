@@ -5,6 +5,7 @@ const mysql = require("mysql");
 require("dotenv").config();
 
 const SQL_PORT = process.env.SQL_PORT;
+const SQL_PASSWORD = process.env.SQL_PASSWORD;
 const app = express();
 
 app.use(express.json());
@@ -12,9 +13,9 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "password",
+  host: "",
+  user: "admin",
+  password: SQL_PASSWORD,
   database: "portfolio_content",
 });
 
