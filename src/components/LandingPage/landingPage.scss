@@ -338,52 +338,9 @@ code {
   }
 }
 
-#hidden {
-  display: none;
-}
-
-.scroll-up {
-  border: 0.1rem solid red;
-  width: 7rem;
-  margin: 6rem;
-  border-radius: 1rem;
-  z-index: 9999;
-  transition: ease 500ms;
-  display: flex;
-  // position: fixed;
-  & svg {
-    stroke: white;
-    width: 1.4;
-  }
-
-  &:active,
-  &:hover {
-    text-shadow: -0.5rem -0.1rem 0.1rem #065a60, 0.5rem -0.1rem 0.1rem #0b525b,
-      -0.5rem 0.1rem 0.1rem #144552, 0.5rem 0.1rem 0.1rem #1b3a4b;
-    width: 10rem;
-  }
-
-  & .scroll-up_btn {
-    cursor: pointer;
-    width: 100%;
-    height: 10rem;
-    background-color: transparent;
-    border: none;
-    transition: ease 500ms;
-
-    &:active,
-    &:hover {
-      text-shadow: -0.5rem -0.1rem 0.1rem #065a60, 0.5rem -0.1rem 0.1rem #0b525b,
-        -0.5rem 0.1rem 0.1rem #144552, 0.5rem 0.1rem 0.1rem #1b3a4b;
-      width: 10rem;
-    }
-  }
-}
-
 .styles_scroll-to-top__2A70v {
-  background-color: transparent;
-  border: none;
+  background-color: transparent !important;
   box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px,
     rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
-    rgb(255, 85, 85) 0px 0px 0px 15px;
+    rgb(255, 85, 85) 0px 0px 0px 15px !important;
 }
