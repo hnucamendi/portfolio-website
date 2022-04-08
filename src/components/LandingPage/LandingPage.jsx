@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import ScrollToTop from "react-scroll-to-top";
+import { ReactComponent as MySVG } from "../UniversalComponents/Footer/arrow.svg";
 import Nav from "../UniversalComponents/Nav/Nav";
 import Footer from "../UniversalComponents/Footer/Footer";
 import Loading from "../LoadingPage/Loading";
@@ -42,6 +44,7 @@ const LandingPage = () => {
   return (
     <>
       <Nav />
+      <ScrollToTop smooth component={<MySVG />} />
       <MainContent />
       <div className={`wrapper`} onScroll={handleBottomScroll}>
         <TechItems data={data} />

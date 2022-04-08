@@ -109,14 +109,6 @@ code {
   }
 }
 
-.wrapper {
-  width: 120rem;
-  margin: 0 auto;
-  height: 120rem;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
 .descriptions {
   width: 100rem;
 
@@ -358,6 +350,7 @@ code {
   z-index: 9999;
   transition: ease 500ms;
   display: flex;
+  // position: fixed;
   & svg {
     stroke: white;
     width: 1.4;
@@ -385,4 +378,12 @@ code {
       width: 10rem;
     }
   }
+}
+
+.styles_scroll-to-top__2A70v {
+  background-color: transparent;
+  border: none;
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px,
+    rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
+    rgb(255, 85, 85) 0px 0px 0px 15px;
 }
