@@ -404,7 +404,7 @@ code {
 /* 540PX */
 @media screen and (max-width: 34em) {
   html {
-    font-size: 50%;
+    font-size: 45%;
   }
 
   h1 {
@@ -434,7 +434,7 @@ code {
     width: 100%;
   }
 
-  .horizontal-scale_main-content {
+  .descriptions {
     & p {
       font-size: 1.7rem;
     }
