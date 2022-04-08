@@ -19,10 +19,8 @@ html {
 
 body {
   font-family: "Quantico", sans-serif;
-  /* background-image: url("img/parallax/stacked-waves-haikei.svg"); */
   background-image: url("../../../public/img/parallax/low-poly-grid-haikei.svg");
   aspect-ratio: 16/9;
-  /* background-size: cover; */
 }
 
 h1,
@@ -221,6 +219,7 @@ code {
   flex-direction: column;
   align-items: center;
   width: 90%;
+  margin: 0 auto;
 
   & .pd_img {
     width: 100%;
