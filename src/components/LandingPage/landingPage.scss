@@ -38,7 +38,7 @@ h5 {
 }
 
 .section-title {
-  border-bottom: #f8f9fa 1px dashed;
+  border-bottom: #f8f9fa 0.1rem dashed;
 }
 
 h1 {
@@ -88,8 +88,10 @@ code {
   border-top: #f8f9fa 0.5rem solid;
   margin-bottom: 6rem;
   padding: 2.5rem;
+  width: 100%;
 
   display: flex;
+
   justify-content: space-evenly;
   align-items: center;
 
@@ -110,7 +112,7 @@ code {
 }
 
 .descriptions {
-  width: 100rem;
+  width: 100%;
 
   & p {
     text-align: left;
@@ -126,7 +128,7 @@ code {
     font-size: 2.3rem;
     padding: 1rem;
     color: #69db7c;
-    text-shadow: 0 0.1rem 0.2rem#f8f9fa;
+    text-shadow: 0 0.1rem 0.2rem #f8f9fa;
     border: 0.1rem #69db7c solid;
     text-transform: uppercase;
     text-decoration: none;
@@ -146,7 +148,7 @@ code {
 /* ******************* */
 
 .main-content {
-  width: 120rem;
+  width: 80%;
   height: 100vh;
   margin: 0 auto;
   display: flex;
@@ -159,21 +161,22 @@ code {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    width: 60rem;
+    width: 60%;
     height: 100vh;
     line-height: 3.5rem;
     padding-bottom: 4rem;
+    margin: 0 auto;
   }
 
   & main img {
-    width: 100vw;
+    width: 70%;
   }
 
   & .home-port_img {
     border-radius: 20%;
     box-shadow: 0rem 0.1rem 1.5rem #000;
     background-position: center;
-    width: 50rem;
+    width: 80%;
   }
 }
 
@@ -184,25 +187,25 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%;
+  margin: 0 auto;
 
   & img {
-    width: 100rem;
-  }
-
-  & video {
-    width: 100rem;
+    width: 90rem;
   }
 }
 
 .tech-horizontal {
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  margin: 0 auto;
 
   & h3 {
     margin-top: 6rem;
-    border-bottom: #f8f9fa 1px dashed;
+    border-bottom: #f8f9fa 0.1rem dashed;
   }
 }
 
@@ -217,6 +220,11 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%;
+
+  & img {
+    width: 100%;
+  }
 }
 
 .pd-img {
@@ -242,6 +250,8 @@ code {
   background-color: #868e96;
   height: 25vh;
   box-shadow: 0.05rem 1rem 1rem #000;
+  width: 100%;
+  margin: 0 auto;
 
   display: flex;
   justify-content: space-evenly;
@@ -275,7 +285,7 @@ code {
   gap: 6rem;
 
   & input {
-    width: 100%;
+    width: 70%;
     height: 10rem;
     padding: 2rem;
     background-color: #343a40;
@@ -302,7 +312,7 @@ code {
   }
   & textarea {
     font-family: Arial, Helvetica, sans-serif;
-    width: 100rem;
+    width: 70%;
     // height: 30rem;
     border: none;
     background-color: #343a40;
@@ -319,14 +329,13 @@ code {
   text-align: center;
   border: none;
   transition: ease 500ms;
-  /* border-bottom: #f8f9fa 1px dashed;s */
   background-color: #212529;
   color: #f8f9fa;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 5.5rem;
   text-decoration: none;
-  width: 50rem;
+  width: 60%;
   height: 6.9rem;
   cursor: pointer;
 
@@ -340,7 +349,72 @@ code {
 
 .styles_scroll-to-top__2A70v {
   background-color: transparent !important;
-  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px,
-    rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
-    rgb(255, 85, 85) 0px 0px 0px 15px !important;
+  box-shadow: rgb(85, 91, 255) 0rem 0rem 0rem 0.3rem,
+    rgb(31, 193, 27) 0rem 0rem 0rem 0.6rem,
+    rgb(255, 217, 19) 0rem 0rem 0rem 0.9rem,
+    rgb(255, 156, 85) 0rem 0rem 0rem 1.2rem,
+    rgb(255, 85, 85) 0rem 0rem 0rem 1.5rem !important;
+}
+
+/* ************* */
+/* MEDIA QUERIES */
+/* ************* */
+
+/* 1168PX */
+@media screen and (max-width: 73em) {
+  body {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+  .hero-section_spacer {
+    font-size: 1.3rem;
+    width: 25rem;
+  }
+}
+
+/* 944PX */
+@media screen and (max-width: 59em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* 768PX */
+@media screen and (max-width: 48em) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+}
+
+/* 540PX */
+@media screen and (max-width: 34em) {
+  html {
+    font-size: 50%;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
 }
