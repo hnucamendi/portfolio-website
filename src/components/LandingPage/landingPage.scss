@@ -429,4 +429,14 @@ code {
   .pd-img {
     width: 35rem;
   }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .horizontal-scale_main-content {
+    & p {
+      font-size: 1.7rem;
+    }
+  }
 }
