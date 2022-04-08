@@ -29,7 +29,7 @@ const TechItems = ({ data }) => {
               <div className="descriptions">
                 <p>{item.description}</p>
               </div>
-              <div>
+              <div className="link-group">
                 <a
                   href={item.item_link}
                   target="_blank"
