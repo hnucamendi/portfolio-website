@@ -22,7 +22,7 @@ const LandingPage = () => {
   };
 
   useEffect(() => {
-    Axios.get("http://127.0.0.1:8000")
+    Axios.get("http://portfolio.oldjimmy.com:8000")
       .then((response) => {
         setData(response.data);
       })
