@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const bodyParser = require("body-parser");
 const mysql = require("mysql");
 require("dotenv").config();
 
@@ -8,6 +9,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = mysql.createConnection({
   host: "localhost",
@@ -30,6 +32,34 @@ app.get("/", (req, res) => {
     }
     res.status(200).send(result);
   });
+});
+
+// app.get("/form", (req, res) => {
+//   db.query("SELECT * FROM user_form", (err, result) => {
+//     if (err) {
+//       throw err;
+//     }
+
+//     res.status(200).json(result);
+//   });
+// });
+
+app.post("/form", (req, res) => {
+  const userName = req.body.userName;
+  const userEmail = req.body.userEmail;
+  const userMessage = req.body.userMessage;
+
+  // const sqlInsert = ;
+  db.query(
+    "INSERT INTO user_form(name, email, message)VALUES (?,?,?)",
+    [userName, userEmail, userMessage],
+    (err, result) => {
+      if (err) {
+        throw err;
+      }
+      res.redirect("/");
+    }
+  );
 });
 
 app.listen(SQL_PORT, () => {

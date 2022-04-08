@@ -113,7 +113,8 @@ code {
   width: 120rem;
   margin: 0 auto;
   height: 120rem;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .descriptions {
