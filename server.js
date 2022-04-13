@@ -20,43 +20,14 @@ const db = mysql.createConnection({
 });
 
 db.connect((err) => {
-  if (err) {
-    throw err;
-  }
+  if (err) throw err;
   console.log("Connection Successful");
 });
 
 app.get("/", (req, res) => {
   db.query("SELECT * FROM portfolio", (err, result) => {
-    if (err) {
-      throw err;
-    }
+    if (err) throw err;
     res.status(200).send(result);
-  });
-});
-
-app.post("/login", (req, res) => {
-  const userName = req.body.userName;
-  const password = req.body.password;
-
-  db.query(
-    "INSERT INTO admin_login(user_name, password)VALUES (?,?)",
-    [userName, password],
-    (err, result) => {
-      if (err) {
-        throw err;
-      }
-      res.redirect("/");
-    }
-  );
-});
-
-app.get("/login", (req, res) => {
-  db.query("SELECT * FROM admin_login", (err, response) => {
-    if (err) {
-      throw err;
-    }
-    res.status(200).json(response);
   });
 });
 
@@ -69,9 +40,7 @@ app.post("/form", (req, res) => {
     "INSERT INTO user_form(name, email, message)VALUES (?,?,?)",
     [userName, userEmail, userMessage],
     (err, result) => {
-      if (err) {
-        throw err;
-      }
+      if (err) throw err;
       res.redirect("/");
     }
   );

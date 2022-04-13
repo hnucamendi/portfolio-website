@@ -1,5 +1,4 @@
 import React from "react";
-import AdminLogin from "../../LandingPage/AdminLogin";
 
 const Nav = () => {
   return (
@@ -10,7 +9,6 @@ const Nav = () => {
         <a href="#tech">Tech</a>
         <a href="#pd">Professional Development</a>
         <a href="#links">Links</a>
-        <AdminLogin />
       </nav>
     </>
   );
