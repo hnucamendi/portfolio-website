@@ -21,9 +21,10 @@ const Footer = () => {
         .catch((err) => {
           throw err;
         });
+    } else {
+      alert("Enter Proper Email Address");
+      return;
     }
-
-    alert("Enter Proper Email Address");
   };
 
   return (
