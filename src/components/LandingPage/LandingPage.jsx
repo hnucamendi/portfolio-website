@@ -45,6 +45,7 @@ const LandingPage = () => {
     <>
       <Nav />
       <ScrollToTop smooth component={<MySVG />} />
+
       <MainContent />
       <div className={`wrapper`} onScroll={handleBottomScroll}>
         <TechItems data={data} />

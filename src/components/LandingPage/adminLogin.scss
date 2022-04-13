@@ -1,0 +1,41 @@
+// COLOR : #087f5b / #065a60 / #0b525b / #144552 / #1b3a4b / #212f45 / #272640 / #312244 / #3e1f47 / #4d194d
+// WHITES : #f8f9fa / #dee2e6 / #868e96 / #212529
+
+.admin-login_container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  & input {
+    border: none;
+    height: 1.8rem;
+    outline: none;
+    padding: 1rem 0;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  & button {
+    border: none;
+    background-color: transparent;
+    cursor: grab;
+    color: #f8f9fa;
+    font-size: 2.3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  & button[value="active"] {
+    cursor: grabbing;
+  }
+
+  & .input-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  & #hidden {
+    display: none;
+  }
+}

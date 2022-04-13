@@ -35,22 +35,36 @@ app.get("/", (req, res) => {
   });
 });
 
-// app.get("/form", (req, res) => {
-//   db.query("SELECT * FROM user_form", (err, result) => {
-//     if (err) {
-//       throw err;
-//     }
+app.post("/login", (req, res) => {
+  const userName = req.body.userName;
+  const password = req.body.password;
 
-//     res.status(200).json(result);
-//   });
-// });
+  db.query(
+    "INSERT INTO admin_login(user_name, password)VALUES (?,?)",
+    [userName, password],
+    (err, result) => {
+      if (err) {
+        throw err;
+      }
+      res.redirect("/");
+    }
+  );
+});
+
+app.get("/login", (req, res) => {
+  db.query("SELECT * FROM admin_login", (err, response) => {
+    if (err) {
+      throw err;
+    }
+    res.status(200).json(response);
+  });
+});
 
 app.post("/form", (req, res) => {
   const userName = req.body.userName;
   const userEmail = req.body.userEmail;
   const userMessage = req.body.userMessage;
 
-  // const sqlInsert = ;
   db.query(
     "INSERT INTO user_form(name, email, message)VALUES (?,?,?)",
     [userName, userEmail, userMessage],
