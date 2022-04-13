@@ -8,7 +8,7 @@ const Footer = () => {
 
   const handleForm = (e) => {
     e.preventDefault();
-    Axios.post("http://localhost:8000/form", {
+    Axios.post("http://portfolio.oldjimmy.com:8000/form", {
       userName: fName,
       userEmail: email,
       userMessage: message,
@@ -48,20 +48,20 @@ const Footer = () => {
             type="text"
             placeholder="Name"
             className="form-01"
-            required
             onChange={(e) => {
               setFName(e.target.value);
             }}
+            required
           />
           <input
             name="email"
             type="email"
             placeholder="Email"
             className="form-02"
-            required
             onChange={(e) => {
               setEmail(e.target.value);
             }}
+            required
           />
           <textarea
             className="form-03"
