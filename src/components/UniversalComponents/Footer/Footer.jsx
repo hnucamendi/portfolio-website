@@ -8,17 +8,22 @@ const Footer = () => {
 
   const handleForm = (e) => {
     e.preventDefault();
-    Axios.post("http://portfolio.oldjimmy.com:8000/form", {
-      userName: fName,
-      userEmail: email,
-      userMessage: message,
-    })
-      .then(() => {
-        alert("success");
+
+    if (email.includes("@")) {
+      Axios.post("http://portfolio.oldjimmy.com:8000/form", {
+        userName: fName,
+        userEmail: email,
+        userMessage: message,
       })
-      .catch((err) => {
-        throw err;
-      });
+        .then(() => {
+          alert("success");
+        })
+        .catch((err) => {
+          throw err;
+        });
+    }
+
+    alert("Enter Proper Email Address");
   };
 
   return (
