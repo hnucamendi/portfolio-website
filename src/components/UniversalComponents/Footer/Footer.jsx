@@ -88,7 +88,7 @@ const Footer = ({ catData }) => {
               backgroundImage: `url(${catData[0].url})`,
               backgroundPosition: "center",
               backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
+              // backgroundRepeat: "no-repeat",
               width: "100%",
               height: "100%",
             }}
