@@ -88,13 +88,11 @@ const Footer = ({ catData }) => {
               backgroundImage: `url(${catData[0].url})`,
               backgroundPosition: "center",
               backgroundSize: "contain",
-              // backgroundRepeat: "no-repeat",
+              backgroundRepeat: "no-repeat",
               width: "100%",
               height: "100%",
             }}
-          >
-            <p>I also Like Cats</p>
-          </div>
+          ></div>
         </div>
       </section>
     </>
