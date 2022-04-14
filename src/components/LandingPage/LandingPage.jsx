@@ -23,7 +23,7 @@ const LandingPage = () => {
         throw err;
       });
 
-    Axios.get("http://localhost:8000/api/cat")
+    Axios.get("http://portfolio.oldjimmy.com:8000/api/cat")
       .then((response) => {
         setCatData(response.data);
         console.log(catData);
