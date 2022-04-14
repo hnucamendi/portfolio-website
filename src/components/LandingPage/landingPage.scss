@@ -23,6 +23,10 @@ body {
   aspect-ratio: 16/9;
 }
 
+#hidden {
+  display: none;
+}
+
 h1,
 h2,
 h3,
@@ -254,16 +258,33 @@ code {
 /* LINKS CONTENT */
 /* ************* */
 
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  align-items: center;
+
+  & img {
+    width: 100%;
+  }
+
+  & p {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}
+
 .link-section {
   padding: 2rem;
   background-color: #868e96;
-  height: 25vh;
-  box-shadow: 0.05rem 1rem 1rem #000;
+  height: 10vh;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
   width: 100%;
   margin: 0 auto;
 
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 4rem;
   align-items: center;
 
   & a:link,
@@ -283,18 +304,14 @@ code {
 }
 
 .contact-form {
-  height: 75vh;
-
   margin: 3rem;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 6rem;
 
   & input {
-    width: 70%;
+    width: 100%;
     height: 10rem;
     padding: 2rem;
     background-color: #343a40;
@@ -321,8 +338,8 @@ code {
   }
   & textarea {
     font-family: Arial, Helvetica, sans-serif;
-    width: 70%;
-    // height: 30rem;
+    width: 100%;
+
     border: none;
     background-color: #343a40;
     padding: 2rem;
@@ -335,24 +352,23 @@ code {
 }
 
 .submit-btn {
-  text-align: center;
-  border: none;
-  transition: ease 500ms;
-  background-color: #212529;
-  color: #f8f9fa;
-  text-transform: uppercase;
   font-weight: 700;
-  font-size: 5.5rem;
-  text-decoration: none;
-  width: 60%;
-  height: 6.9rem;
+  width: 100%;
   cursor: pointer;
+  background-color: transparent;
+  font-size: 5.3rem;
+  padding: 1rem;
+  color: #f8f9fa;
+  text-shadow: 0 0.1rem 0.2rem #f8f9fa;
+  border: 0.1rem #69db7c solid;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: color ease-in-out 500ms;
 
   &:active,
   &:hover {
-    text-shadow: -0.5rem -0.1rem 0.1rem #065a60, 0.5rem -0.1rem 0.1rem #0b525b,
-      -0.5rem 0.1rem 0.1rem #144552, 0.5rem 0.1rem 0.1rem #1b3a4b;
-    width: 80rem;
+    color: #69db7c;
   }
 }
 

@@ -12,11 +12,21 @@ import "./landingPage.scss";
 const LandingPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [data, setData] = useState([]);
+  const [catData, setCatData] = useState([]);
 
   useEffect(() => {
     Axios.get("http://localhost:8000")
       .then((response) => {
         setData(response.data);
+      })
+      .catch((err) => {
+        throw err;
+      });
+
+    Axios.get("http://localhost:8000/api/cat")
+      .then((response) => {
+        setCatData(response.data);
+        console.log(catData);
       })
       .catch((err) => {
         throw err;
@@ -39,7 +49,7 @@ const LandingPage = () => {
       <MainContent />
       <div className="wrapper">
         <TechItems data={data} />
-        <Footer />
+        <Footer catData={catData} />
       </div>
     </>
   );

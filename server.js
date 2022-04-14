@@ -2,10 +2,12 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const mysql = require("mysql");
+const axios = require("axios").default;
 require("dotenv").config();
 
 const SQL_PORT = process.env.SQL_PORT;
 const SQL_PASSWORD = process.env.SQL_PASSWORD;
+const CAT_API = process.env.CAT_API;
 const app = express();
 
 app.use(express.json());
@@ -36,6 +38,13 @@ app.get("/", (req, res) => {
     if (err) throw err;
     res.status(200).send(result);
   });
+});
+
+app.get("/api/cat", async (req, res) => {
+  const response = await axios.get(
+    `https://api.thecatapi.com/v1/images/search?${CAT_API}`
+  );
+  res.status(200).json(response.data);
 });
 
 app.post("/form", (req, res) => {
