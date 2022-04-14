@@ -455,4 +455,28 @@ code {
   .horizontal-scale_main-content {
     width: 100;
   }
+
+  .tech-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-container {
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+  }
+
+  .contact-form {
+    grid-row: 2/4;
+  }
+
+  .form-img {
+    grid-column: 1/3;
+  }
+
+  .descriptions {
+    & p {
+      font-size: 1.3rem;
+    }
+  }
 }
