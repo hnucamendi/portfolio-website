@@ -12,9 +12,16 @@ app.use(express.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// const db = mysql.createConnection({
+//   host: "portfolio.ctul2xxq1xtc.us-east-2.rds.amazonaws.com",
+//   user: "admin",
+//   password: SQL_PASSWORD,
+//   database: "portfolio_content",
+// });
+
 const db = mysql.createConnection({
-  host: "portfolio.ctul2xxq1xtc.us-east-2.rds.amazonaws.com",
-  user: "admin",
+  host: "localhost",
+  user: "root",
   password: SQL_PASSWORD,
   database: "portfolio_content",
 });

@@ -20,15 +20,19 @@ const TechItems = ({ data }) => {
             >
               <h3>{item.title}</h3>
               <a href={item.item_link} target="_blank" rel="noreferrer">
-                <img
-                  src={item.img}
-                  alt="Ecommerce landing page"
-                  className="tech_img"
-                />
+                <div className="img-container_hover">
+                  <img
+                    src={item.img}
+                    alt="Ecommerce landing page"
+                    className="tech_img"
+                  />
+
+                  <div className="descriptions">
+                    <p>{item.description}</p>
+                  </div>
+                </div>
               </a>
-              <div className="descriptions">
-                <p>{item.description}</p>
-              </div>
+
               <div className="link-group">
                 <a
                   href={item.item_link}

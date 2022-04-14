@@ -110,10 +110,29 @@ code {
 }
 
 .descriptions {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
   width: 100%;
+  opacity: 0;
+  transition: 0.6s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(0.3rem);
 
   & p {
-    text-align: left;
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
 }
 
@@ -182,9 +201,21 @@ code {
 /* ************ */
 
 .tech-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  justify-items: center;
+
+  & #java {
+    grid-column: 1 / 4;
+  }
+
+  & .link-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
   width: 100%;
   margin: 0 auto;
 
@@ -193,52 +224,31 @@ code {
   }
 }
 
+.img-container_hover {
+  position: relative;
+
+  &:hover .descriptions {
+    opacity: 1;
+    offset: 50%;
+    transform: scale(1.1);
+    transition: transform 1s;
+    box-shadow: rgba(105, 219, 124, 0.1) 0px 9px 30px;
+  }
+}
+
 .tech-horizontal {
   width: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  justify-content: space-between;
   margin: 0 auto;
+  transition: width 2s;
 
   & h3 {
-    margin-top: 6rem;
+    margin-top: 2rem;
     border-bottom: #f8f9fa 0.1rem dashed;
   }
-}
-
-/* PD CONTENT */
-/* ********** */
-
-.parallax-pd_img {
-  margin: 6rem 0;
-}
-
-.pd-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto;
-
-  & .pd_img {
-    width: 100%;
-  }
-}
-
-.pd-img {
-  width: 100%;
-  /* padding: 6rem; */
-}
-
-.pd-video {
-  margin: 6rem 0;
-}
-
-.pd-img_link:hover {
-  border: 0.1rem #f8f9fa dashed;
-  box-shadow: 0 0.8rem 100rem #000;
-  transition: ease 1000ms;
 }
 
 /* LINKS CONTENT */
@@ -417,17 +427,9 @@ code {
     gap: 2rem;
   }
 
-  .pd-content {
-    margin: 0 auto;
-  }
-
   .link-group {
     display: flex;
     flex-direction: column;
-  }
-
-  .pd-img {
-    width: 35rem;
   }
 
   .main-content {
