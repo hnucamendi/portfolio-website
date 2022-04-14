@@ -40,12 +40,12 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/api/cat", async (req, res) => {
-  const response = await axios.get(
-    `https://api.thecatapi.com/v1/images/search?${CAT_API}`
-  );
-  res.status(200).json(response.data);
-});
+// app.get("/api/cat", async (req, res) => {
+//   const response = await axios.get(
+//     `https://api.thecatapi.com/v1/images/search?${CAT_API}`
+//   );
+//   res.status(200).json(response.data);
+// });
 
 app.post("/form", (req, res) => {
   const userName = req.body.userName;
