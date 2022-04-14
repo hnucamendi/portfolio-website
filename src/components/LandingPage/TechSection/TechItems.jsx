@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 
 const TechItems = ({ data }) => {
-  const [noLink, setNoLink] = useState(false);
-
   return (
     <>
       <div className="parallax parallax-tech_img"></div>
       <section className="tech-content" id="tech">
-        <h2 id="java">-- HTML / CSS / JavaScript --</h2>
+        <h2 id="java">-- HTML / CSS / JavaScript / Java --</h2>
         {data.map((item) => (
           <div
             className="tech-horizontal tech-item--006 blob"

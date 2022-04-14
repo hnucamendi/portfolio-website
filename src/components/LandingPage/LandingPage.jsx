@@ -15,7 +15,7 @@ const LandingPage = () => {
   const [catData, setCatData] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:8000")
+    Axios.get("http://portfolio.oldjimmy.com:8000")
       .then((response) => {
         setData(response.data);
       })
