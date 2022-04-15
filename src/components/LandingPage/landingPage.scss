@@ -446,14 +446,21 @@ code {
     width: 100%;
   }
 
-  .descriptions {
+  .horizontal-scale_main-content {
+    width: 100;
+
     & p {
-      font-size: 1.7rem;
+      font-size: 2rem;
+      text-align: center;
+      padding: 0 4rem;
     }
   }
 
-  .horizontal-scale_main-content {
-    width: 100;
+  .link-section a {
+    &:link,
+    &:visited {
+      font-size: 3.3rem;
+    }
   }
 
   .tech-content {
@@ -462,21 +469,17 @@ code {
   }
 
   .form-container {
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
     justify-content: center;
   }
 
-  .contact-form {
-    grid-row: 2/4;
-  }
-
   .form-img {
-    grid-column: 1/3;
+    display: none;
   }
 
   .descriptions {
     & p {
-      font-size: 1.3rem;
+      font-size: 1.8rem;
     }
   }
 }
