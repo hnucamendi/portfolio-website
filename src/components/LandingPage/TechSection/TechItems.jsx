@@ -5,7 +5,7 @@ const TechItems = ({ data }) => {
     <>
       <div className="parallax parallax-tech_img"></div>
       <section className="tech-content" id="tech">
-        <h2 id="java">-- HTML / CSS / JavaScript / Java --</h2>
+        <h2 id="java">-- Tech --</h2>
         {data.map((item) => (
           <div
             className="tech-horizontal tech-item--006 blob"
