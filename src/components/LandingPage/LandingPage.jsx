@@ -15,7 +15,7 @@ const LandingPage = () => {
   const [catData, setCatData] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://portfolio.oldjimmy.com:8000")
+    Axios.get("http://www.oldjimmy.com:8000")
       .then((response) => {
         setData(response.data);
       })
@@ -23,7 +23,7 @@ const LandingPage = () => {
         throw err;
       });
 
-    Axios.get("http://portfolio.oldjimmy.com:8000/api/cat")
+    Axios.get("http://www.oldjimmy.com:8000/api/cat")
       .then((response) => {
         setCatData(response.data);
         console.log(catData);

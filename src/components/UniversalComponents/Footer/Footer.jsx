@@ -10,7 +10,7 @@ const Footer = ({ catData }) => {
     e.preventDefault();
 
     if (email.includes("@")) {
-      Axios.post("http://portfolio.oldjimmy.com:8000/form", {
+      Axios.post("http://www.oldjimmy.com:8000/form", {
         userName: fName,
         userEmail: email,
         userMessage: message,
