@@ -13,6 +13,7 @@ const LandingPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [data, setData] = useState([]);
   const [catData, setCatData] = useState([]);
+  const [logos, setLogos] = useState([]);
 
   useEffect(() => {
     Axios.get("http://www.oldjimmy.com:8000")
@@ -26,7 +27,15 @@ const LandingPage = () => {
     Axios.get("http://www.oldjimmy.com:8000/api/cat")
       .then((response) => {
         setCatData(response.data);
-        console.log(catData);
+      })
+      .catch((err) => {
+        throw err;
+      });
+
+    Axios.get("http://www.oldjimmy.com:8000/logos")
+      .then((response) => {
+        setLogos(response.data);
+        console.log(logos);
       })
       .catch((err) => {
         throw err;
@@ -45,8 +54,7 @@ const LandingPage = () => {
     <>
       <Nav />
       <ScrollToTop smooth component={<MySVG />} />
-
-      <MainContent />
+      <MainContent logos={logos} />
       <div className="wrapper">
         <TechItems data={data} />
         <Footer catData={catData} />

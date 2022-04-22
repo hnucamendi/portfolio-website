@@ -40,6 +40,13 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/logos", (req, res) => {
+  db.query("SELECT * FROM logos", (err, result) => {
+    if (err) throw err;
+    res.status(200).send(result);
+  });
+});
+
 app.get("/api/cat", async (req, res) => {
   const response = await axios.get(
     `https://api.thecatapi.com/v1/images/search?${CAT_API}`
