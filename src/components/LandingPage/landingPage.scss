@@ -208,6 +208,7 @@ code {
 
     & .main-logo_section {
       width: 80%;
+      animation: float 3s ease-in-out infinite;
     }
   }
 
@@ -220,6 +221,20 @@ code {
     box-shadow: 0rem 0.1rem 1.5rem #000;
     background-position: center;
     width: 50%;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatex(1rem);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: translatex(1rem);
   }
 }
 
