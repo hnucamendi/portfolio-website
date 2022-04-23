@@ -22,3 +22,14 @@
   line-height: 4rem;
   /* text-align: center; */
 }
+
+/* 768PX */
+@media screen and (max-width: 48em) {
+  .parallax-tech_img {
+    display: none;
+  }
+
+  .parallax-links_img {
+    display: none;
+  }
+}
