@@ -217,10 +217,15 @@ code {
   }
 
   & .home-port_img {
-    border-radius: 20%;
+    border-style: double;
+    border-width: 1rem;
+    border-bottom-left-radius: 20%;
+    border-top-right-radius: 50%;
     box-shadow: 0rem 0.1rem 1.5rem #000;
+    background-image: url("../../../public/img/parallax/main-poly-background.svg");
     background-position: center;
-    width: 50%;
+    border-color: #f8f9fa;
+    width: 45%;
   }
 }
 

@@ -5,7 +5,7 @@ const MainContent = ({ logos }) => {
     <main className="main-content">
       <div className="horizontal-scale_main-content">
         <img
-          src="./img/Author/IMG_9433.JPG"
+          src="./img/Author/IMG_9433.png"
           alt="Harold"
           className="home-port_img"
         />
