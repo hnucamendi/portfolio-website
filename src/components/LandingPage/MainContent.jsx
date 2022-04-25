@@ -23,16 +23,17 @@ const MainContent = ({ logos }) => {
             into a coding bootcamp and I knew I had found my passion for
             programming.
           </p>
-
-          {logos.map((item) => (
-            <div key={item.id}>
-              <img
-                src={item.img}
-                alt="tech logo"
-                className="main-logo_section"
-              />
-            </div>
-          ))}
+          <div className="logo-container">
+            {logos.map((item) => (
+              <div key={item.id}>
+                <img
+                  src={item.img}
+                  alt="tech logo"
+                  className="main-logo_section"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </main>

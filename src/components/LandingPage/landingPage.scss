@@ -196,6 +196,7 @@ code {
     & div {
       display: flex;
       justify-content: center;
+      align-items: center;
     }
 
     & p {
@@ -203,12 +204,18 @@ code {
     }
 
     & h2 {
-      grid-column: 1 /13;
+      grid-column: 1 / 13;
     }
 
     & .main-logo_section {
-      width: 80%;
+      width: 100%;
       animation: float 3s ease-in-out infinite;
+    }
+
+    & .logo-container {
+      padding: 2rem;
+      gap: 1rem;
+      grid-column: 1 / 13;
     }
   }
 
