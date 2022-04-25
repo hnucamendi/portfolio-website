@@ -190,7 +190,7 @@ code {
 
   .content-container_grid {
     display: grid;
-    grid-template-columns: repeat(11, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     align-items: center;
 
     & div {
@@ -199,11 +199,11 @@ code {
     }
 
     & p {
-      grid-column: 1 / 12;
+      grid-column: 1 / 13;
     }
 
     & h2 {
-      grid-column: 1 /12;
+      grid-column: 1 /13;
     }
 
     & .main-logo_section {
