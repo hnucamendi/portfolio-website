@@ -16,6 +16,7 @@ const TechItems = ({ data }) => {
             <a href={item.item_link} target="_blank" rel="noreferrer">
               <div className="img-container_hover">
                 <img
+                  loading="lazy"
                   src={item.img}
                   alt="Ecommerce landing page"
                   className="tech_img"
