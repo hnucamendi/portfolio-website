@@ -1,5 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=Libre+Barcode+39+Text&family=Tilt+Neon&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  font-size: 62.5%;
+  font-family: "Tilt Neon", "Fira Code", "Libre Barcode 39 Text", monospace;
+
+  --bg-color-main: #212529;
+  --bg-color-second: #20c997;
+  --t-color-main: #f8f9fa;
+  --t-color-second: #c7c7c7;
+  --t-color-hover: #38d9a9;
+
+  --fs-main-h1: 4.209rem;
+  --fs-main-h2: 3.157rem;
+  --fs-main-h3: 2.369rem;
+  --fs-main-h4: 1.777rem;
+  --fs-main-h5: 1.333rem;
+  --fs-main-default: 1rem;
+  --fs-main-small: 0.75rem;
+}
+
+body {
+  background-color: var(--bg-color-main);
+}
+
+/* .custom-pointer {
+  cursor: url("./assets/favicon-32x32.png"), auto;
+}
+.custom-pointer:active {
+  cursor: url("./assets/favicon-32x32.png"), auto;
+}
+a:hover {
+  cursor: url("./assets/favicon-32x32.png"), auto;
+} */

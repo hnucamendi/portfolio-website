@@ -1,6 +1,4 @@
-import Header from "./components/Header/Header.jsx";
-import reactLogo from "./assets/react.svg";
-// import Footer from "./Components/Footer/Footer";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
