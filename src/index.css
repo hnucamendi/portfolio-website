@@ -29,12 +29,12 @@ body {
   background-color: var(--bg-color-main);
 }
 
-/* .custom-pointer {
-  cursor: url("./assets/favicon-32x32.png"), auto;
+.custom-pointer {
+  cursor: url("./assets/custom-cursor.png"), none;
 }
 .custom-pointer:active {
-  cursor: url("./assets/favicon-32x32.png"), auto;
+  cursor: url("./assets/custom-cursor-active.png"), none;
 }
 a:hover {
-  cursor: url("./assets/favicon-32x32.png"), auto;
-} */
+  cursor: url("./assets/custom-cursor-hover.png"), auto;
+}
