@@ -10,7 +10,7 @@ const Header: React.FC = () => {
         <ListItem title="Projects" link="#projects"></ListItem>
         <ListItem title="About Me" link="#about-me"></ListItem>
         <ListItem
-          title="hnucamendi"
+          title="nucamendi"
           link="#home"
           className="align-right"
         ></ListItem>
