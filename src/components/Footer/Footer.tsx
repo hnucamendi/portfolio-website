@@ -1,9 +1,14 @@
+import "../../styles/Footer/Footer.css";
 import ListItem from "../Shared/ListItem";
 
-export default function Footer() {
+const Footer: React.FC = () => {
   return (
-    <>
-      <ListItem title="Test" isLink={false}></ListItem>
-    </>
+    <footer className="main-footer">
+      <ol>
+        <ListItem title="Test" isLink={false}></ListItem>
+      </ol>
+    </footer>
   );
-}
+};
+
+export default Footer;

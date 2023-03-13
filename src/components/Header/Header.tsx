@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../../styles/Header/header.css";
 import ListItem from "../Shared/ListItem";
 
