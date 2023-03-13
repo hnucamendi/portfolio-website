@@ -1,7 +1,9 @@
+import ListItem from "../Shared/ListItem";
+
 export default function Footer() {
   return (
     <>
-      <p>Footer</p>
+      <ListItem title="Test" isLink={false}></ListItem>
     </>
   );
 }
