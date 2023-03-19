@@ -1,5 +1,6 @@
 .block-container {
   width: 120rem;
+  height: 100vh;
   color: var(--t-color-main);
   margin: 5rem auto;
   padding: 10%;
