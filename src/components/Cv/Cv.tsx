@@ -3,10 +3,11 @@ import Block from "../Shared/Block";
 
 const Cv: React.FC = () => {
   return (
-    <Block
-      contentType={"cv"}
-      title={"CV"}
-      content={`
+    <div id="cv">
+      <Block
+        contentType={"cv"}
+        title={"CV"}
+        content={`
   <div>
   <header>
     <p>
@@ -170,7 +171,8 @@ const Cv: React.FC = () => {
 </div>
 )}
 </div>`}
-    ></Block>
+      ></Block>
+    </div>
   );
 };
 
