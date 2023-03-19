@@ -11,7 +11,7 @@ const Block: React.FC<Props> = (props: Props) => {
   return (
     <div
       className="block-container"
-      style={{ height: props.contentType === "main" ? "100vh" : "" }}
+      style={{ overflow: props.contentType === "main" ? "" : "scroll" }}
     >
       {props.contentType === "main" &&
         (props.images as string[]).length >= 1 && (
@@ -40,10 +40,10 @@ const Block: React.FC<Props> = (props: Props) => {
         )}
 
       {props.contentType === "cv" && (
-        <code>
-          Test
-          <p>Test</p>
-        </code>
+        <>
+          <h1>{props.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: props.content }} />
+        </>
       )}
     </div>
   );
