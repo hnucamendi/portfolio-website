@@ -11,9 +11,6 @@
   --footer-padding: 2.5rem;
   --footer-top-border-size: 0.2rem;
 
-  position: sticky;
-  bottom: 0;
-  z-index: 999;
   min-height: var(--footer-min-height);
   max-height: var(--footer-max-height);
   font-size: var(--fs-main-h2);

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 interface Props {
   title: string;
   isLink: boolean;
+  target?: string;
   link?: string;
   current?: boolean;
   className?: string;
@@ -22,6 +23,7 @@ const ListItem: React.FC<Props> = (props: Props) => {
             onClick={handleClick}
             onBlur={handleBlur}
             aria-current={isLinkActive}
+            target={props.target}
           >
             {props.title}
           </a>
