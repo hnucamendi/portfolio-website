@@ -1,7 +1,5 @@
 .block-container {
   width: 120rem;
-  height: 100vh;
-  /* height: 100%; */
   color: var(--t-color-main);
   margin: 5rem auto;
   padding: 10%;
@@ -11,9 +9,15 @@
 }
 
 .block-images img {
-  border-radius: 50%;
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+  transition: 1.5s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 .block-images img:hover {
-  transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+  border-bottom-left-radius: 0%;
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 20%;
+  border-top-left-radius: 40%;
+  transition: 1s cubic-bezier(0.65, 0.05, 0.36, 1);
   box-shadow: var(--bg-color-second) 0px 0px 10px;
 }

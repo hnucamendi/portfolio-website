@@ -1,7 +1,7 @@
 import "../../styles/Block/block.css";
 
 interface Props {
-  contentType: string;
+  contentType: "main" | "cv";
   title: string;
   content: string;
   images?: string[];
@@ -9,7 +9,10 @@ interface Props {
 
 const Block: React.FC<Props> = (props: Props) => {
   return (
-    <div className="block-container">
+    <div
+      className="block-container"
+      style={{ height: props.contentType === "main" ? "100vh" : "" }}
+    >
       {props.contentType === "main" &&
         (props.images as string[]).length >= 1 && (
           <main>
@@ -35,6 +38,13 @@ const Block: React.FC<Props> = (props: Props) => {
             </div>
           </main>
         )}
+
+      {props.contentType === "cv" && (
+        <code>
+          Test
+          <p>Test</p>
+        </code>
+      )}
     </div>
   );
 };
