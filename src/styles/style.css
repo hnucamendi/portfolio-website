@@ -65,11 +65,17 @@ a {
 }
 
 .custom-pointer {
-  cursor: url("/images/custom-cursor.png"), none;
+  cursor: url("/images/custom-cursor.png") 16 16, auto;
 }
-.custom-pointer:active {
-  cursor: url("/images/custom-cursor-active.png"), none;
+
+.custom-pointer a:hover {
+  cursor: url("/images/custom-cursor-hover.png") 16 16, auto;
 }
-a:hover {
-  cursor: url("/images/custom-cursor-hover.png"), auto;
+
+.custom-pointer a:active {
+  cursor: url("/images/custom-cursor-active.png") 16 16, auto;
+}
+
+.pointer-toggle {
+  cursor: url("/images/custom-cursor-hover.png") 16 16, auto;
 }
