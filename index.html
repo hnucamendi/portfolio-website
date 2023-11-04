@@ -2,7 +2,10 @@
 <html lang="en">
   {{>head}}
   <body class="custom-pointer">
-    <div id="app">{{>header}} {{>aboutme}} {{>footer}}</div>
+    <div id="app">
+      {{>header}} {{>aboutme}} {{>section}} {{>newsapi}} {{>footer}}
+    </div>
     <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/js/news-api.ts"></script>
   </body>
 </html>

@@ -1,0 +1,10 @@
+.section {
+  padding: 50px;
+  margin: 50px;
+}
+
+.section hr {
+  border: none;
+  border-top: 2px dashed green;
+  border-bottom: 1px dashed blue;
+}
