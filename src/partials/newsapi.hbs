@@ -2,8 +2,21 @@
   <h1>~International Zone~</h1>
   <div class="selection">
     <div id="endpoints"></div>
-    <label id="countries" for="select-countries">Countries</label>
-    <select id="select-countries" name="select-countries"></select>
-    <div id="articles"></div>
+    <div class="selection-wrapper">
+      <div>
+        <div class="selection-group">
+          <label id="countries" for="select-countries">Countries</label>
+          <select id="select-countries" name="select-countries"></select>
+        </div>
+        <div class="selection-group">
+          <label id="endpoints" for="select-endpoints">Endpoints</label>
+          <select id="select-endpoints" name="select-endpoints"></select>
+        </div>
+      </div>
+      <div>
+        <button id="submit">Submit</button>
+      </div>
+      <div class="articles"></div>
+    </div>
   </div>
 </div>
