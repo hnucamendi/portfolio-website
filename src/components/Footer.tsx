@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from "react"
 
-const Foooter: React.FC<PropsWithChildren> = ({ children }) => {
+const Footer: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
       {children}
@@ -8,4 +8,4 @@ const Foooter: React.FC<PropsWithChildren> = ({ children }) => {
   )
 }
 
-export default Foooter
+export default Footer
