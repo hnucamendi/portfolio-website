@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Header, Footer, Content, Body } from "./styles/styles"
 
 const App: React.FC = () => {
+  const [background, setBackground] = useState(null);
+
+  useEffect(() => {
+  })
+
+  const fetchBackground = async () => {
+    //const data = await fetch("https://api.nasa.gov/planetary/apod")
+    //console.log({ data })
+  }
+
   //  const body = document.querySelector("body");
   //  const pointerToggle = document.querySelector(".pointer-toggle");
   //
