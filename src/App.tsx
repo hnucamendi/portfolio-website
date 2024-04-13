@@ -1,8 +1,5 @@
 import React from "react";
-import Header from "./components/Header"
-import Body from "./components/Body"
-import Content from "./components/Content"
-import Footer from "./components/Footer"
+import { Header, Footer, Content, Body } from "./styles/styles"
 
 const App: React.FC = () => {
   //  const body = document.querySelector("body");
