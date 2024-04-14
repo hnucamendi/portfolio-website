@@ -33,7 +33,7 @@ const App: React.FC = () => {
           <h1>Harold Arriola Nucamendi 🇲🇽🇺🇸</h1>
           <div>
             <img
-              src="/images/harold-portrait.webp"
+              src="/images/harold-portrait2.jpg"
               alt="AI generated picture of Harold"
             />
             <p>
@@ -204,11 +204,11 @@ const App: React.FC = () => {
         <div className="footer">
           <ol>
             <li><a
-              href="https://github.com/hnucamendi"
+              href="https://github.com/hnucamendi/"
               target="_blank"
             >GitHub</a></li>
             <li><a
-              href="https://linkedin.com/in/hnucamendi"
+              href="https://linkedin.com/in/hnucamendi/"
               target="_blank"
             >LinkedIn</a></li>
           </ol>
