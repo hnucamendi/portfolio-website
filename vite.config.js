@@ -1,10 +1,7 @@
-import { resolve } from "path";
-import handlebars from "vite-plugin-handlebars";
+import react from "@vitejs/plugin-react-swc";
+import { defineConfig } from "vite";
 
-export default {
-  plugins: [
-    handlebars({
-      partialDirectory: resolve(__dirname, "src/partials"),
-    }),
-  ],
-};
+// https://vite.js.dev/config
+export default defineConfig({
+  plugins: [react()],
+})
