@@ -53,8 +53,9 @@ export const Footer = styled.div`
   list-style: none;
 }
 `
-export const Content = styled.div`
+export const Content = styled.div<{ $backgroundImage?: string }>`
 .projects {
+  background-image: url(${props => props.$backgroundImage || ""});
   display: flex;
   flex-direction: column;
   gap: 25px;

@@ -1,16 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { Header, Footer, Content, Body } from "./styles/styles"
 
+interface nasaPayload {
+  copyright: string,
+  date: string,
+  explanation: string,
+  media_type: string,
+  service_version: string,
+  title: string,
+  url: string,
+  thumbnail_url: string,
+}
+
 const App: React.FC = () => {
-  const [background, setBackground] = useState(null);
+  const [background, setBackground] = useState<null | nasaPayload>(null);
 
   useEffect(() => {
-  })
-
-  const fetchBackground = async () => {
-    //const data = await fetch("https://api.nasa.gov/planetary/apod")
-    //console.log({ data })
-  }
+    fetch(`https://api.nasa.gov/planetary/apod?thumbs=True&api_key=${import.meta.env.VITE_NASA_API_KEY}`)
+      .then((res) => res.json())
+      .then((data) => setBackground(data))
+  }, [])
 
   //  const body = document.querySelector("body");
   //  const pointerToggle = document.querySelector(".pointer-toggle");
@@ -35,6 +44,7 @@ const App: React.FC = () => {
   //    );
   //  }
 
+  console.log(background)
   return (
     <Body>
       <Header>
@@ -46,7 +56,7 @@ const App: React.FC = () => {
           </ol>
         </div>
       </Header>
-      <Content>
+      <Content $backgroundImage={background?.thumbnail_url}>
         <div className="about-me" id="about-me">
           <h1>Harold Arriola Nucamendi 🇲🇽🇺🇸</h1>
           <div>
