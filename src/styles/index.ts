@@ -2,14 +2,14 @@ import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyles = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Montserrat:wght@400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Vampiro+One&display=swap');
 
 :root {
   font-family: "IBM Plex Sans", sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-size: 10px;
-
-  color-scheme: light dark;
+  background-color: ${({ theme }) => theme.Background.One}
 }
 
 * {
@@ -19,26 +19,30 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 h1 {
-  font-size: 4.209rem;
+  font-size: ${({ theme }) => theme.Text.H1.REM}rem;
 }
 
 h2 {
-  font-size: 3.157rem;
+  font-size: ${({ theme }) => theme.Text.H2.REM}rem;
 }
 
 h3 {
-  font-size: 2.369rem;
+  font-size: ${({ theme }) => theme.Text.H3.REM}rem;
 }
 
 h4 {
-  font-size: 1.777rem;
+  font-size: ${({ theme }) => theme.Text.H4.REM}rem;
 }
 
 h5 {
-  font-size: 1.333rem;
+  font-size: ${({ theme }) => theme.Text.H5.REM}rem;
 }
 
-h1,
+h6 {
+  font-size: ${({ theme }) => theme.Text.H6.REM}rem;
+}
+
+  h1,
   h2,
   h3,
   h4,
@@ -47,15 +51,21 @@ h1,
   margin: 30px 0 13.8px;
   font-weight: 900;
   line-height: 1.3;
+  color: ${({ theme }) => theme.Foreground.One}
 }
 
 p {
   margin-bottom: 30px;
+  color: ${({ theme }) => theme.Foreground.One}
+}
+
+span {
+  color: ${({ theme }) => theme.Foreground.One}
 }
 
 body {
   font-size: 1.4rem;
-  width: 1200px;
+  width: 75em;
   margin: 0 auto;
 }
 
@@ -64,22 +74,14 @@ a {
   text-transform: uppercase;
   font-weight: 700;
   text-decoration: none;
-  color: inherit;
+  color: ${({ theme }) => theme.Foreground.One};
 }
 
-.custom-pointer {
-  cursor: url("/images/custom-cursor.png") 16 16, auto;
+a:hover {
+  color: ${({ theme }) => theme.Foreground.Two};
 }
 
-.custom-pointer a:hover {
-  cursor: url("/images/custom-cursor-hover.png") 16 16, auto;
-}
-
-.custom-pointer a:active {
-  cursor: url("/images/custom-cursor-active.png") 16 16, auto;
-}
-
-.pointer-toggle {
-  cursor: url("/images/custom-cursor-hover.png") 16 16, auto;
+a:active {
+  color: ${({ theme }) => theme.Foreground.Three};
 }
 `

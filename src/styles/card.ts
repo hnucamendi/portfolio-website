@@ -27,5 +27,3 @@ export default styled.div<{ $backgroundImage?: string }>`
   margin: 0 0;
 }
 `
-
-

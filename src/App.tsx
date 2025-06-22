@@ -1,69 +1,19 @@
 import React, { MouseEvent } from "react";
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import Container from "./components/Container"
 import Card from "./components/Card"
+import Container from "./components/Container"
 
 const App: React.FC = () => {
-  const handlePointerToggleClick = (e: MouseEvent) => {
-    e.preventDefault();
-    const body = document.querySelector("body");
-    const pointerToggle = document.querySelector(".pointer-toggle");
-    if (body != null && pointerToggle != null) {
-      body.classList.toggle("custom-pointer");
-
-      (e.target as HTMLElement).style.cursor = "";
-
-      if (!body.classList.contains("custom-pointer")) {
-        (e.target as HTMLElement).style.cursor = "pointer";
-      }
-    }
-  };
-
-  const handleOnHover = (e: MouseEvent) => {
-    e.preventDefault();
-    e.currentTarget.innerHTML = "ハロルドアリオラ二ゅカメンディ";
-  };
-
-  const handleOnStopHover = (e: MouseEvent) => {
-    e.preventDefault();
-    e.currentTarget.innerHTML = "Harold Arriola Nucamendi";
-  };
-
   return (
     <Container>
-      <Header
-        handlePointer={handlePointerToggleClick}
-      />
-      <Card>
-        <div className="about-me" id="about-me">
-          <h1 onMouseOver={handleOnHover} onMouseLeave={handleOnStopHover}>
-            Harold Arriola Nucamendi 🇲🇽🇺🇸
-          </h1>
-          <div>
-            <img
-              src="/images/harold-portrait2.jpg"
-              alt="AI generated picture of Harold"
-            />
-            <p>
-              Hey there, I'm a Software Engineer with a knack for developing
-              efficient and creative web applications and services. I'm fluent
-              in Go, Node.js, React.js, AWS, and Terraform, and I make sure to
-              keep my skills razor-sharp to stay in step with the ever-evolving
-              world of web development. I spend my days maintaining backend
-              services, contributing to big projects, and teaming up with
-              diverse folks to hit our business goals and keep our customers
-              happy. I'm the kind of guy who loves a good challenge and thrives
-              on growing professionally. Quick to learn and eager to take on new
-              adventures, I'm all about adding value to my team and pushing the
-              boundaries of what's possible in the digital landscape. So let's
-              roll up our sleeves and make something amazing together!
-            </p>
-          </div>
-        </div>
-      </Card>
+      <Header />
+      <div>
+        <p style={{ textAlign: "center" }}>
+          Software Engineer based in North Carolina. I work mostly with Go, Node.js, React, AWS, and Terraform. Today I maintain backend systems, and collaborate with cross-functional teams to deliver internal product tooling.
+        </p>
+      </div>
       <div className="projects" id="projects">
-        <h2>Projects</h2>
         <Card>
           <div className="project-wrapper">
             <hr />
@@ -232,7 +182,7 @@ const App: React.FC = () => {
         </Card>
       </div>
       <Footer />
-    </Container>
+    </Container >
   );
 };
 export default App;
