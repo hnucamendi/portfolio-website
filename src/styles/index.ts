@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components"
+
+export const GlobalStyles = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Montserrat:wght@400;500;700;900&display=swap");
 
 :root {
@@ -36,10 +39,10 @@ h5 {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5 {
+  h2,
+  h3,
+  h4,
+  h5 {
   font-family: "Montserrat", serif;
   margin: 30px 0 13.8px;
   font-weight: 900;
@@ -79,3 +82,4 @@ a {
 .pointer-toggle {
   cursor: url("/images/custom-cursor-hover.png") 16 16, auto;
 }
+`

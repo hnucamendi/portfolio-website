@@ -1,9 +1,8 @@
 import React, { MouseEvent } from "react";
-import { Header, Footer, Content, Body } from "./styles/styles";
-
-enum Action {
-  TRANSLATE = "translate",
-}
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import Container from "./components/Container"
+import Card from "./components/Card"
 
 const App: React.FC = () => {
   const handlePointerToggleClick = (e: MouseEvent) => {
@@ -32,28 +31,11 @@ const App: React.FC = () => {
   };
 
   return (
-    <Body>
-      <Header>
-        <div className="navbar sticky">
-          <ol>
-            <li>
-              <a href="#navbar">Harold</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <button
-                className="pointer-toggle"
-                onClick={handlePointerToggleClick}
-              >
-                Toggle Pointer
-              </button>
-            </li>
-          </ol>
-        </div>
-      </Header>
-      <Content>
+    <Container>
+      <Header
+        handlePointer={handlePointerToggleClick}
+      />
+      <Card>
         <div className="about-me" id="about-me">
           <h1 onMouseOver={handleOnHover} onMouseLeave={handleOnStopHover}>
             Harold Arriola Nucamendi 🇲🇽🇺🇸
@@ -79,10 +61,10 @@ const App: React.FC = () => {
             </p>
           </div>
         </div>
-      </Content>
+      </Card>
       <div className="projects" id="projects">
         <h2>Projects</h2>
-        <Content>
+        <Card>
           <div className="project-wrapper">
             <hr />
             <h3>Web Scraper</h3>
@@ -102,9 +84,9 @@ const App: React.FC = () => {
             <a>More Details</a>
             <hr />
           </div>
-        </Content>
+        </Card>
 
-        <Content>
+        <Card>
           <div className="project-wrapper">
             <hr />
             <h3>NEOVIM</h3>
@@ -119,9 +101,9 @@ const App: React.FC = () => {
             </p>
             <hr />
           </div>
-        </Content>
+        </Card>
 
-        <Content>
+        <Card>
           <div className="project-wrapper">
             <hr />
             <h3>Track Commits Road to Hire</h3>
@@ -147,9 +129,9 @@ const App: React.FC = () => {
             <a>More Details</a>
             <hr />
           </div>
-        </Content>
+        </Card>
 
-        <Content>
+        <Card>
           <div className="project-wrapper">
             <hr />
             <h3>Advent of Code</h3>
@@ -174,9 +156,9 @@ const App: React.FC = () => {
             </a>
             <hr />
           </div>
-        </Content>
+        </Card>
 
-        <Content>
+        <Card>
           <div className="project-wrapper">
             <hr />
             <h3>Arch Linux</h3>
@@ -192,9 +174,9 @@ const App: React.FC = () => {
             </p>
             <hr />
           </div>
-        </Content>
+        </Card>
 
-        <Content>
+        <Card>
           <div className="project-wrapper">
             <hr />
             <h3>Finance Tracker V1</h3>
@@ -220,9 +202,9 @@ const App: React.FC = () => {
             <a>More Details</a>
             <hr />
           </div>
-        </Content>
+        </Card>
 
-        <Content>
+        <Card>
           <div className="project-wrapper">
             <hr />
             <h3>Tech Write Up</h3>
@@ -247,25 +229,10 @@ const App: React.FC = () => {
             <a>More Details</a>
             <hr />
           </div>
-        </Content>
+        </Card>
       </div>
-      <Footer>
-        <div className="footer">
-          <ol>
-            <li>
-              <a href="https://github.com/hnucamendi/" target="_blank">
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://linkedin.com/in/hnucamendi/" target="_blank">
-                LinkedIn
-              </a>
-            </li>
-          </ol>
-        </div>
-      </Footer>
-    </Body>
+      <Footer />
+    </Container>
   );
 };
 export default App;
