@@ -1,6 +1,6 @@
 [
   {
-    "title": "NEOVIM",
+    "title": "Neovim",
     "description": "At the beginning of 2024, I gave myself the goal of moving over to Neovim full-time by the end of the year. I'm happy to report that 2025 has been a year full of Neovim! The reason I wanted to make this switch was to learn more about LSPs, linters, debuggers, formatters, and other low-level IDE configurations. I've learned a lot and made tons of changes to my setup—check out my latest Neovim config below.",
     "links": [{"title":"github", "link":"https://github.com/hnucamendi/nvim"}]
   },
@@ -10,7 +10,7 @@
     "links": [{"title": "github 2022", "link":"https://github.com/hnucamendi/adventofcode2022"}, {"title":"github 2023", "link": "https://github.com/hnucamendi/adventofcode2023"}]
   },
   {
-    "title": "Tech Write Up",
+    "title": "JavaScript Deepdive",
     "description": "I made this as a study guide for students I was working with around 2 years ago. At the time, I wanted to start blogging regular programming language breakdowns like this one, but I never found the time or motivation to move past JavaScript. I've been considering coming back to this at some point.",
     "links": [{"title": "github", "link":"https://github.com/hnucamendi/codingCheatSheet"}, {"title":"Medium", "link":"https://medium.com/@hnucamendi"}]
   },
@@ -18,5 +18,5 @@
   "title": "CreeperKeeper",
   "description": "CreeperKeeper is a project I began in May 2024 and continue to update in my free time. It's an open source Minecraft server management service designed to be simple and cost-efficient—ideal for short play sessions with friends. Instead of paying for a full month, you just click a button and pay for what you use. As of June 2025, it’s functional but not yet scalable.",
   "links": [{"title": "github", "link":"https://github.com/hnucamendi/CreeperKeeper"}]
-}
+  }
 ]

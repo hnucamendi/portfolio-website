@@ -8,13 +8,15 @@ import data from "./projectData.json"
 
 const App: React.FC = () => {
   return (
-    <Container>
+    <>
       <Header />
-      <div>
+      <Container>
+        <img style={{width: "25%" }} src="/images/kitty1.JPG" />
         <p style={{ textAlign: "center" }}>
           Welcome! My name is Harold. I'm a Software Engineer based in North Carolina, working primarily with Go, Node, AWS, and Terraform. These days, I focus on maintaining backend systems and collaborating with cross-functional teams to deliver internal product tooling.
         </p>
-      </div>
+        <img style={{width: "25%"}} src="/images/kitty2.JPG" />
+      </Container>
       <GridContainer>
         {data.map((card, i) => (
           <Card key={i}>
@@ -31,7 +33,7 @@ const App: React.FC = () => {
         ))}
       </GridContainer>
       <Footer />
-    </Container >
+    </>
   );
 };
 export default App;
