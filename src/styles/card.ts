@@ -1,29 +1,16 @@
 import styled from "styled-components"
 
-export default styled.div<{ $backgroundImage?: string }>`
-.projects {
-  background-image: url(${props => props.$backgroundImage || ""});
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+export default styled.div`
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+& h3 {
+  font-family: "Sen";
 }
 
-.project-wrapper {
-  border: 1px solid ${({ theme }) => theme.Foreground.Three};
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  padding: 20px;
+& p {
+  font-family: "Sen";
 }
 
-.status-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  gap: 25px;
-}
-
-.status-wrapper p,
-.status-wrapper h4 {
-  margin: 0 0;
+& a {
+  font-family: "Sen";
 }
 `

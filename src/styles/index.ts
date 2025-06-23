@@ -84,4 +84,48 @@ a:hover {
 a:active {
   color: ${({ theme }) => theme.Foreground.Three};
 }
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  body {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  h5 {
+    font-size: 1.6rem;
+  }
+
+  h6 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1rem;
+  }
+}
 `

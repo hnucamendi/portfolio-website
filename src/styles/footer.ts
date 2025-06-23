@@ -14,4 +14,14 @@ export default styled.div`
   gap: 25px;
   list-style: none;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer ol {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+}
 `
+

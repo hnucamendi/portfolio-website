@@ -34,4 +34,17 @@ export default styled.div`
   width: 100%;
   z-index: 100;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .navbar span {
+    font-size: 1.5rem;
+  }
+}
 `

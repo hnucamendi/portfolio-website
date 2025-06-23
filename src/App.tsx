@@ -3,19 +3,19 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Card from "./components/Card"
 import Container from "./components/Container"
+import GridContainer from "./components/GridContainer"
 import data from "./projectData.json"
 
 const App: React.FC = () => {
-  console.log(data)
   return (
     <Container>
       <Header />
       <div>
         <p style={{ textAlign: "center" }}>
-          Software Engineer based in North Carolina. I work mostly with Go, Node.js, React, AWS, and Terraform. Today I maintain backend systems, and collaborate with cross-functional teams to deliver internal product tooling.
+          Welcome! My name is Harold. I'm a Software Engineer based in North Carolina, working primarily with Go, Node, AWS, and Terraform. These days, I focus on maintaining backend systems and collaborating with cross-functional teams to deliver internal product tooling.
         </p>
       </div>
-      <div className="projects" id="projects">
+      <GridContainer>
         {data.map((card, i) => (
           <Card key={i}>
             <div className="project-wrapper">
@@ -29,7 +29,7 @@ const App: React.FC = () => {
             </div>
           </Card>
         ))}
-      </div>
+      </GridContainer>
       <Footer />
     </Container >
   );
