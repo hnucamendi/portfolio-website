@@ -1,50 +1,37 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-
-// Header //
-export default styled.div`
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Vampiro+One&display=swap');
-
-.navbar{
-  display: flex;
-  justify-content: space-evenly;
-  padding: 15px 0;
-}
-
-.navbar span {
-  font-size: ${({ theme }) => theme.Text.H1.REM}rem;
-}
-
-.navbar span:nth-child(odd) {
-  font-family: "Dela Gothic One", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  color: ${({ theme }) => theme.Background.Two}
-}
-
-.navbar span:nth-child(even) {
-  font-family: "Vampiro One", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.sticky {
+export default styled.header`
   position: sticky;
   top: 0;
-  width: 100%;
   z-index: 100;
-}
+  background: ${({ theme }) => theme.Background.One};
+  backdrop-filter: blur(10px);
+  background: rgba(33, 37, 41, 0.95);
+  border-bottom: 1px solid ${({ theme }) => theme.Background.Three};
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: row;
+  .header-content {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 0.5rem;
+    padding: ${({ theme }) => theme.Spacing.MD} 0;
   }
 
-  .navbar span {
-    font-size: 1.5rem;
+  .logo {
+    font-family: "Montserrat", sans-serif;
+    font-size: ${({ theme }) => theme.Text.H5.REM}rem;
+    font-weight: 700;
+    color: ${({ theme }) => theme.Foreground.One};
+    text-decoration: none;
+    cursor: pointer;
   }
-}
-`
+
+  @media (max-width: 768px) {
+    .header-content {
+      padding: ${({ theme }) => theme.Spacing.SM} 0;
+    }
+
+    .logo {
+      font-size: ${({ theme }) => theme.Text.H6.REM}rem;
+    }
+  }
+`;
