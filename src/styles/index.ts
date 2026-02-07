@@ -1,21 +1,25 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Montserrat:wght@400;500;700;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Vampiro+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Montserrat:wght@400;500;600;700;900&display=swap");
 
 :root {
   font-family: "IBM Plex Sans", sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-size: 10px;
-  background-color: ${({ theme }) => theme.Background.One}
+  background-color: ${({ theme }) => theme.Background.One};
+  scroll-behavior: smooth;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -42,60 +46,66 @@ h6 {
   font-size: ${({ theme }) => theme.Text.H6.REM}rem;
 }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-  font-family: "Montserrat", serif;
-  margin: 30px 0 13.8px;
-  font-weight: 900;
-  line-height: 1.3;
-  color: ${({ theme }) => theme.Foreground.One}
-}
-
-p {
-  margin-bottom: 30px;
-  color: ${({ theme }) => theme.Foreground.One}
-}
-
-span {
-  color: ${({ theme }) => theme.Foreground.One}
-}
-
-body {
-  font-size: 1.4rem;
-  width: 75em;
-  margin: 0 auto;
-}
-
-a {
-  font-family: "Montserrat", serif;
-  text-transform: uppercase;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  text-decoration: none;
+  line-height: 1.3;
   color: ${({ theme }) => theme.Foreground.One};
 }
 
-a:hover {
+p {
   color: ${({ theme }) => theme.Foreground.Two};
+  line-height: 1.6;
+}
+
+span {
+  color: ${({ theme }) => theme.Foreground.One};
+}
+
+body {
+  font-size: 1.6rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 ${({ theme }) => theme.Spacing.LG};
+}
+
+a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: ${({ theme }) => theme.Foreground.One};
+  transition: color ${({ theme }) => theme.Transition.Fast};
+}
+
+a:hover {
+  color: ${({ theme }) => theme.Accent.Primary};
 }
 
 a:active {
   color: ${({ theme }) => theme.Foreground.Three};
 }
 
+::selection {
+  background: ${({ theme }) => theme.Background.Three};
+  color: ${({ theme }) => theme.Foreground.One};
+}
+
 /* Responsive Styles */
 @media (max-width: 1200px) {
   body {
-    width: 90%;
-    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 ${({ theme }) => theme.Spacing.LG};
   }
 }
 
 @media (max-width: 768px) {
   body {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    padding: 0 ${({ theme }) => theme.Spacing.MD};
   }
 
   h1 {
@@ -125,7 +135,8 @@ a:active {
 
 @media (max-width: 480px) {
   body {
-    font-size: 1rem;
+    font-size: 1.4rem;
+    padding: 0 ${({ theme }) => theme.Spacing.SM};
   }
 }
-`
+`;

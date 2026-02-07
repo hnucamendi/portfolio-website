@@ -1,0 +1,44 @@
+[
+  {
+    "id": "se",
+    "role": "Software Engineer",
+    "company": "Red Ventures",
+    "location": "Charlotte, NC",
+    "startDate": "March 2025",
+    "endDate": "Present",
+    "achievements": [
+      "Implemented BMAD method and AI tooling to accelerate telephony integrations",
+      "Re-architected multi-tenant telephony platform for improved scalability",
+      "Closed PCI compliance gaps with encrypted S3 storage solutions"
+    ],
+    "technologies": ["Go", "AWS", "Terraform", "AI Tooling"]
+  },
+  {
+    "id": "ase",
+    "role": "Associate Software Engineer",
+    "company": "Red Ventures",
+    "location": "Charlotte, NC",
+    "startDate": "March 2023",
+    "endDate": "March 2025",
+    "achievements": [
+      "Built Go API for agent scheduling using AWS API Gateway and DynamoDB",
+      "Developed advertising automation reducing manual work by ~70%",
+      "Led database consolidation project achieving ~55% cost reduction"
+    ],
+    "technologies": ["Go", "TypeScript", "AWS Lambda", "DynamoDB", "API Gateway"]
+  },
+  {
+    "id": "jse",
+    "role": "Junior Software Engineer",
+    "company": "Red Ventures",
+    "location": "Charlotte, NC",
+    "startDate": "May 2022",
+    "endDate": "March 2023",
+    "achievements": [
+      "Developed Go-based ETL pipelines for data processing workflows",
+      "Created internal automation tools improving team productivity",
+      "Collaborated with cross-functional teams on backend system maintenance"
+    ],
+    "technologies": ["Go", "Node.js", "AWS", "SQL"]
+  }
+]

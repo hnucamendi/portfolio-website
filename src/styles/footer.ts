@@ -1,27 +1,70 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-// FOOTER // 
-export default styled.div`
-.footer {
-  border-bottom: 1px solid #e6e6e6;
-  padding: 15px 0;
-  margin: 30px 0;
-}
+export default styled.footer`
+  padding: ${({ theme }) => theme.Spacing.XL} 0;
+  border-top: 1px solid ${({ theme }) => theme.Background.Three};
+  margin-top: ${({ theme }) => theme.Spacing.Section};
 
-.footer ol {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  list-style: none;
-}
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: ${({ theme }) => theme.Spacing.LG};
+  }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .footer ol {
+  .footer-left {
+    display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: ${({ theme }) => theme.Spacing.XS};
+  }
+
+  .footer-name {
+    font-family: "Montserrat", sans-serif;
+    font-size: ${({ theme }) => theme.Text.H6.REM}rem;
+    font-weight: 700;
+    color: ${({ theme }) => theme.Foreground.One};
+    margin: 0;
+  }
+
+  .footer-copyright {
+    color: ${({ theme }) => theme.Text.Muted};
+    font-size: ${({ theme }) => theme.Text.Small.REM}rem;
+    margin: 0;
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    gap: ${({ theme }) => theme.Spacing.LG};
+    list-style: none;
+    margin: 0;
     padding: 0;
   }
-}
-`
 
+  .footer-links a {
+    color: ${({ theme }) => theme.Foreground.Two};
+    font-size: ${({ theme }) => theme.Text.Small.REM}rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color ${({ theme }) => theme.Transition.Fast};
+  }
+
+  .footer-links a:hover {
+    color: ${({ theme }) => theme.Foreground.One};
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-links {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: ${({ theme }) => theme.Spacing.MD};
+    }
+  }
+`;

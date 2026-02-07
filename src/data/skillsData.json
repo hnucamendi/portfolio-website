@@ -1,0 +1,41 @@
+[
+  {
+    "category": "Languages",
+    "skills": [
+      { "name": "Go" },
+      { "name": "TypeScript" },
+      { "name": "Node.js" },
+      { "name": "Java" },
+      { "name": "SQL" }
+    ]
+  },
+  {
+    "category": "Backend & Systems",
+    "skills": [
+      { "name": "REST APIs" },
+      { "name": "Distributed Systems" },
+      { "name": "Auth Patterns" },
+      { "name": "ETL Pipelines" }
+    ]
+  },
+  {
+    "category": "Cloud & Infrastructure",
+    "skills": [
+      { "name": "AWS Lambda" },
+      { "name": "API Gateway" },
+      { "name": "DynamoDB" },
+      { "name": "S3" },
+      { "name": "RDS" },
+      { "name": "Terraform" },
+      { "name": "CI/CD" }
+    ]
+  },
+  {
+    "category": "Practices",
+    "skills": [
+      { "name": "BMAD Method" },
+      { "name": "Spec-Driven Development" },
+      { "name": "AI-Assisted Development" }
+    ]
+  }
+]

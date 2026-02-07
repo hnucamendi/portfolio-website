@@ -1,0 +1,62 @@
+[
+  {
+    "id": "hyuga",
+    "title": "Hyuga",
+    "description": "Desktop utility for organizing and managing printed assets. Built with TypeScript and Electron for a seamless cross-platform experience.",
+    "technologies": ["TypeScript", "Electron", "Desktop"],
+    "links": [
+      { "title": "GitHub", "link": "https://github.com/hnucamendi/hyuga" }
+    ],
+    "featured": true
+  },
+  {
+    "id": "creeperkeeper",
+    "title": "CreeperKeeper",
+    "description": "Open source Minecraft server management service. Spin up servers on-demand and pay only for what you use. Built with Go backend and AWS infrastructure managed by Terraform.",
+    "technologies": ["Go", "AWS", "Terraform", "Lambda"],
+    "links": [
+      { "title": "GitHub", "link": "https://github.com/hnucamendi/TF-CreeperKeeper" }
+    ],
+    "featured": true
+  },
+  {
+    "id": "terraform-minecraft",
+    "title": "Terraform Minecraft Module",
+    "description": "Published Terraform module for spinning up EC2 instances to host Minecraft servers. Uses itzg/minecraft-server Docker image for easy configuration.",
+    "technologies": ["Terraform", "AWS", "EC2", "Docker"],
+    "links": [
+      { "title": "GitHub", "link": "https://github.com/hnucamendi/terraform-aws-minecraft-server-module" }
+    ],
+    "featured": false
+  },
+  {
+    "id": "neovim",
+    "title": "Neovim Config",
+    "description": "Custom Neovim configuration built from scratch. A deep dive into LSPs, linters, debuggers, and low-level IDE tooling. Licensed under Apache 2.0.",
+    "technologies": ["Lua", "Neovim", "LSP"],
+    "links": [
+      { "title": "GitHub", "link": "https://github.com/hnucamendi/nvim" }
+    ],
+    "featured": false
+  },
+  {
+    "id": "nethertravel",
+    "title": "NetherTravel",
+    "description": "A utility tool to help calculate optimal travel routes through the Minecraft Nether dimension. Simplifies coordinate conversion and portal placement.",
+    "technologies": ["TypeScript", "Web"],
+    "links": [
+      { "title": "GitHub", "link": "https://github.com/hnucamendi/NetherTravel" }
+    ],
+    "featured": false
+  },
+  {
+    "id": "tech-deep-dives",
+    "title": "Tech Deep Dives",
+    "description": "Educational content and study guides for software engineering concepts. Created as teaching material for aspiring developers.",
+    "technologies": ["JavaScript", "Education"],
+    "links": [
+      { "title": "GitHub", "link": "https://github.com/hnucamendi/tech-deep-dives" }
+    ],
+    "featured": false
+  }
+]
